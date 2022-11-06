@@ -1,12 +1,12 @@
-.element__group_like {
+.element__group-like {
   margin: 0;
 }
 
-.element__group_like:hover {
+.element__group-like:hover {
   opacity: .6;
   cursor: pointer;
 }
 
-.element__group_like:active {
+.element__group-like:active {
   background-color: black;
 }
