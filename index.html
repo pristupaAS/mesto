@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+</head>
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="Лого">
+      <div class="header__line"></div>
+    </header>
+    <section class="profile">
+      <div class="profile__box">
+      <img class="profile__image" src="./images/imageavatar.svg" alt="Фото профиля">
+      <div class="profile__info">
+        <p class="profile__name">Жак-Ив Кусто</p>
+        <p class="profile__job">Исследователь океана</p>
+        <button  class="profile__button">
+          <img class="profile__button_image" src="./images/редактировать.svg" alt="Иконка">
+        </button>
+      </div>
+      </div>
+      <button class="button-add">
+        <img class="button-add__image" src="./images/button-add.svg" alt="Кнопка добавления">
+      </button>
+    </section>
+    <section class="popup">
+      <form name="popup" class="popup__container" action="1" >
+        <button class="popup__close">
+          <img class="popup__close_image" src="./images/Iconclose.svg" alt="Крестик">
+        </button>
+        <fieldset class="popup__input">
+          <p class="popup__title">Редактировать профиль</p>
+          <input class="popup__name" type="text" placeholder="Жак-Ив Кусто">
+          <div class="popup__line"></div>
+          <input class="popup__job" type="text" placeholder="Исследователь океана">
+          <div class="popup__line"></div>
+        </fieldset>
+        <button type="submit" class="popup__save">Сохранить</button>
+      </form>
+    </section>
+    <section class="elements">
+      <div class="element">
+        <img class="element__image" src="./images/elemet-1.jpg" alt="Карачаевск">
+        <div class="element__position">
+          <p class="element__group">Карачаевск</p>
+          <img class="element__group_like" src="./images/like-1.svg" alt="Лайк">
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Камчатка.jpg" alt="Камчатка">
+        <div class="element__position">
+          <p class="element__group">Камчатка</p>
+          <img class="element__group_like" src="./images/like-1.svg" alt="Лайк">
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Кировск.jpg" alt="Кировск">
+        <div class="element__position">
+          <p class="element__group">Кировск</p>
+          <img class="element__group_like" src="./images/like-1.svg" alt="Лайк">
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Соловецкий-остров.jpg" alt="Соловецкий остров">
+        <div class="element__position">
+          <p class="element__group">Соловецкий остров</p>
+          <img class="element__group_like" src="./images/like-1.svg" alt="Лайк">
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Москва.jpg" alt="Москва">
+        <div class="element__position">
+          <p class="element__group">Москва</p>
+          <img class="element__group_like" src="./images/like-1.svg" alt="Лайк">
+        </div>
+      </div>
+      <div class="element">
+        <img class="element__image" src="./images/Остров-Ольхон.jpg" alt="Ольхон">
+        <div class="element__position">
+          <p class="element__group">Остров Ольхон</p>
+          <img class="element__group_like" src="./images/like-1.svg" alt="Лайк">
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <p class="footer__text">&copy; 2022 Mesto Russia</p>
+    </footer>
+  </div>
+  <script src="./vendor/scripts/script.js"></script>
+</body>
+</html>

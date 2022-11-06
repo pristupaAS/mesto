@@ -1,0 +1,33 @@
+.page {
+  position: relative;
+    background-color: #000000;
+    max-width: 1280px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 45px calc((100vw - 880px)/2) 60px;
+    font-family: 'Inter', 'Arial', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+  }
+
+  @media screen and (max-width: 930px) {
+    .page {
+      margin-left: 19px;
+      margin-right: 19px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .page {
+      margin: 0;
+      padding-top: 27px;
+      padding-bottom: 36px;
+    }
+  }
