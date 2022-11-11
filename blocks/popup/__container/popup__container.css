@@ -1,7 +1,7 @@
 .popup__container {
   position: relative;
   margin: 0 auto;
-  margin-top: calc((100vh - 340px)/2);;
+  margin-top: calc((100vh - 340px)/2);
   width: 430px;
   background: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
