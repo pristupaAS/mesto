@@ -1,20 +1,17 @@
 .popup__container {
-  position: fixed;
-  margin: auto;
-  top: calc((100vh - 340px)/2);
-  left: calc((100vw - 430px)/2);
+  position: relative;
+  margin: 0 auto;
+  margin-top: calc((100vh - 340px)/2);;
   width: 430px;
   background: #FFFFFF;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
-  align-items: center;
   z-index: 2;
 }
 
 @media screen and (max-width: 550px) {
   .popup__container {
     width: 282px;
-    top: calc((100vh - 322px)/2);
-    left: calc((100vw - 282px)/2);
+    margin-top: calc((100vh - 335px)/2);
   }
 }

@@ -1,7 +1,7 @@
 let openButton = document.querySelector('.profile__button');
 let closeButton = document.querySelector('.popup__close');
 let popen = document.querySelector('.popup');
-let pfofName = document.querySelector('.profile__name');
+let profName = document.querySelector('.profile__name');
 let profJob = document.querySelector('.profile__job');
 let formElement =  document.querySelector('.popup__container');
 let nameInput = document.querySelector('.popup__name');
@@ -9,7 +9,7 @@ let jobInput = document.querySelector('.popup__job');
 
 function open() {
   popen.classList.add('popup_opened');
-  nameInput.value = pfofName.textContent;
+  nameInput.value = profName.textContent;
   jobInput.value = profJob.textContent;
 }
 
@@ -17,6 +17,8 @@ openButton.addEventListener('click', open);
 
 function close() {
   popen.classList.remove('popup_opened');
+  nameInput.value = profName.textContent;
+  jobInput.value = profJob.textContent;
 }
 
 closeButton.addEventListener('click', close);
@@ -31,11 +33,9 @@ function formSubmitHandler (evt) {
   // Получите значение полей jobInput и nameInput из свойства value
   nameInput.value;
   jobInput.value;
-  // Выберите элементы, куда должны быть вставлены значения полей
-  let pfofName = document.querySelector('.profile__name');
-  let profJob = document.querySelector('.profile__job');
+
   // Вставьте новые значения с помощью textContent
-  pfofName.textContent = nameInput.value;
+  profName.textContent = nameInput.value;
   profJob.textContent = jobInput.value ;
   popen.classList.remove('popup_opened');
 }
