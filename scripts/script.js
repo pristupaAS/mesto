@@ -3,9 +3,9 @@ let closeButton = document.querySelector('.popup__close');
 let popen = document.querySelector('.popup');
 let profName = document.querySelector('.profile__name');
 let profJob = document.querySelector('.profile__job');
-let formElement =  document.querySelector('.popup__container');
-let nameInput = document.querySelector('.popup__name');
-let jobInput = document.querySelector('.popup__job');
+let formElement =  document.querySelector('.popup__form');
+let nameInput = document.querySelector('.popup__input_content_name');
+let jobInput = document.querySelector('.popup__input_content_job');
 
 function open() {
   popen.classList.add('popup_opened');
@@ -13,15 +13,9 @@ function open() {
   jobInput.value = profJob.textContent;
 }
 
-openButton.addEventListener('click', open);
-
 function close() {
   popen.classList.remove('popup_opened');
-  nameInput.value = profName.textContent;
-  jobInput.value = profJob.textContent;
 }
-
-closeButton.addEventListener('click', close);
 
 // Обработчик «отправки» формы, хотя пока
 // она никуда отправляться не будет
@@ -31,15 +25,15 @@ function formSubmitHandler (evt) {
                                               // О том, как это делать, расскажем позже.
 
   // Получите значение полей jobInput и nameInput из свойства value
-  nameInput.value;
-  jobInput.value;
 
   // Вставьте новые значения с помощью textContent
   profName.textContent = nameInput.value;
   profJob.textContent = jobInput.value ;
-  popen.classList.remove('popup_opened');
+  close();
 }
 
+openButton.addEventListener('click', open);
+closeButton.addEventListener('click', close);
 // Прикрепляем обработчик к форме:
 // он будет следить за событием “submit” - «отправка»
 formElement.addEventListener('submit', formSubmitHandler);

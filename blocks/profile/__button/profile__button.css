@@ -1,13 +1,13 @@
 .profile__button {
   padding: 0;
-  margin: 0;
-  position: absolute;
-  top: 15px;
-  right: 0;
-  background-color: black;
+  margin: 15px 0 0 18px;
+  background-color: transparent;
   border: 1px solid #FFFFFF;
   width: 24px;
   height: 24px;
+  background-image: url(../../../images/редактировать.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .profile__button:hover {
@@ -17,6 +17,8 @@
 
 @media screen and (max-width: 550px) {
   .profile__button {
+    position: absolute;
+    margin: 0;
     width: 18px;
     height: 18px;
     top: 8px;

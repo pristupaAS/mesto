@@ -2,10 +2,13 @@
   position: relative;
   margin: auto 0;
   min-width: 336px;
+  display: grid;
+  grid-template-columns: minmax(189px, 294px) 1fr;
 }
 
 @media screen and (max-width: 550px) {
   .profile__info {
+    display: block;
     min-width: 282px;
     text-align: center;
   }

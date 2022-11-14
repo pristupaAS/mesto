@@ -11,82 +11,77 @@
   <div class="page">
     <header class="header">
       <img class="header__logo" src="./images/logo.svg" alt="Лого">
-      <div class="header__line"></div>
     </header>
-    <section class="profile">
-      <div class="profile__box">
-      <img class="profile__image" src="./images/imageavatar.svg" alt="Фото профиля">
-      <div class="profile__info">
-        <p class="profile__name">Жак-Ив Кусто</p>
-        <button  class="profile__button">
-          <img class="profile__button-image" src="./images/редактировать.svg" alt="Иконка">
+    <main class="content">
+      <section class="profile">
+        <div class="profile__box">
+          <img class="profile__image" src="./images/imageavatar.svg" alt="Фото профиля">
+          <div class="profile__info">
+            <h1 class="profile__name">Жак-Ив Кусто</h1>
+            <button class="profile__button"></button>
+            <p class="profile__job">Исследователь океана</p>
+          </div>
+        </div>
+        <button class="button-add">
+          <img class="button-add__image" src="./images/button-add.svg" alt="Кнопка добавления">
         </button>
-        <p class="profile__job">Исследователь океана</p>
-      </div>
-      </div>
-      <button class="button-add">
-        <img class="button-add__image" src="./images/button-add.svg" alt="Кнопка добавления">
-      </button>
-    </section>
-    <section class="popup">
-      <form name="popup" class="popup__container" action="1" >
-        <button class="popup__close">
-          <img class="popup__close-image" src="./images/Iconclose.svg" alt="Крестик">
-        </button>
-        <fieldset class="popup__input">
-          <p class="popup__title">Редактировать профиль</p>
-          <input class="popup__name" type="text" placeholder="Жак-Ив Кусто">
-          <div class="popup__line"></div>
-          <input class="popup__job" type="text" placeholder="Исследователь океана">
-          <div class="popup__line"></div>
-        </fieldset>
-        <button type="submit" class="popup__save">Сохранить</button>
-      </form>
-    </section>
-    <section class="elements">
-      <div class="element">
-        <img class="element__image" src="./images/elemet-1.jpg" alt="Карачаевск">
-        <div class="element__position">
-          <p class="element__group">Карачаевск</p>
-          <img class="element__group-like" src="./images/like-1.svg" alt="Лайк">
+      </section>
+      <section class="popup">
+        <div class="popup__container">
+          <h3 class="popup__title">Редактировать профиль</h3>
+          <button class="popup__close" type="button"></button>
+          <form name="popup" class="popup__form" action="1">
+            <input class="popup__input popup__input_content_name" type="text" placeholder="Жак-Ив Кусто">
+            <input class="popup__input popup__input_content_job" type="text" placeholder="Исследователь океана">
+            <button type="submit" class="popup__save">Сохранить</button>
+          </form>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Камчатка.jpg" alt="Камчатка">
-        <div class="element__position">
-          <p class="element__group">Камчатка</p>
-          <img class="element__group-like" src="./images/like-1.svg" alt="Лайк">
+      </section>
+      <section class="elements">
+        <div class="element">
+          <img class="element__image" src="./images/elemet-1.jpg" alt="Карачаевск">
+          <div class="element__position">
+            <h2 class="element__group">Карачаевск</h2>
+            <button class="element__group-like" type="button"></button>
+          </div>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Кировск.jpg" alt="Кировск">
-        <div class="element__position">
-          <p class="element__group">Кировск</p>
-          <img class="element__group-like" src="./images/like-1.svg" alt="Лайк">
+        <div class="element">
+          <img class="element__image" src="./images/Камчатка.jpg" alt="Камчатка">
+          <div class="element__position">
+            <h2 class="element__group">Камчатка</h2>
+            <button class="element__group-like" type="button"></button>
+          </div>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Соловецкий-остров.jpg" alt="Соловецкий остров">
-        <div class="element__position">
-          <p class="element__group">Соловецкий остров</p>
-          <img class="element__group-like" src="./images/like-1.svg" alt="Лайк">
+        <div class="element">
+          <img class="element__image" src="./images/Кировск.jpg" alt="Кировск">
+          <div class="element__position">
+            <h2 class="element__group">Кировск</h2>
+            <button class="element__group-like" type="button"></button>
+          </div>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Москва.jpg" alt="Москва">
-        <div class="element__position">
-          <p class="element__group">Москва</p>
-          <img class="element__group-like" src="./images/like-1.svg" alt="Лайк">
+        <div class="element">
+          <img class="element__image" src="./images/Соловецкий-остров.jpg" alt="Соловецкий остров">
+          <div class="element__position">
+            <h2 class="element__group">Соловецкий остров</h2>
+            <button class="element__group-like" type="button"></button>
+          </div>
         </div>
-      </div>
-      <div class="element">
-        <img class="element__image" src="./images/Остров-Ольхон.jpg" alt="Ольхон">
-        <div class="element__position">
-          <p class="element__group">Остров Ольхон</p>
-          <img class="element__group-like" src="./images/like-1.svg" alt="Лайк">
+        <div class="element">
+          <img class="element__image" src="./images/Москва.jpg" alt="Москва">
+          <div class="element__position">
+            <h2 class="element__group">Москва</h2>
+            <button class="element__group-like" type="button"></button>
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="element">
+          <img class="element__image" src="./images/Остров-Ольхон.jpg" alt="Ольхон">
+          <div class="element__position">
+            <h2 class="element__group">Остров Ольхон</h2>
+            <button class="element__group-like" type="button"></button>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer">
       <p class="footer__text">&copy; 2022 Mesto Russia</p>
     </footer>
