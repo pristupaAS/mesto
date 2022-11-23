@@ -37,8 +37,30 @@
           </form>
         </div>
       </section>
+      <section class="popup popup__new-card">
+        <div class="popup__container popup__container_new-card">
+          <h3 class="popup__title">Новое место</h3>
+          <button class="popup__close popup__close_new-card" type="button"></button>
+          <form name="popup" class="popup__form popup__form_new-card" action="1">
+            <input class="popup__input popup__input_new-card_name" type="text" placeholder="Название">
+            <input class="popup__input popup__input_new-card_url" type="text" placeholder="Ссылка на картинку">
+            <button type="submit" class="popup__save popup__save_new-card">Создать</button>
+          </form>
+        </div>
+      </section>
+      <template id="card">
+        <div class="element">
+          <button class="trash"></button>
+          <img class="element__image" src="./images/elemet-1.jpg" alt="Карачаевск">
+          <div class="element__position">
+            <h2 class="element__group">Карачаевск</h2>
+            <button class="element__group-like" type="button"></button>
+          </div>
+        </div>
+      </template>
       <section class="elements">
         <div class="element">
+          <button class="trash"></button>
           <img class="element__image" src="./images/elemet-1.jpg" alt="Карачаевск">
           <div class="element__position">
             <h2 class="element__group">Карачаевск</h2>
@@ -46,6 +68,7 @@
           </div>
         </div>
         <div class="element">
+          <button class="trash"></button>
           <img class="element__image" src="./images/Камчатка.jpg" alt="Камчатка">
           <div class="element__position">
             <h2 class="element__group">Камчатка</h2>
@@ -53,6 +76,7 @@
           </div>
         </div>
         <div class="element">
+          <button class="trash"></button>
           <img class="element__image" src="./images/Кировск.jpg" alt="Кировск">
           <div class="element__position">
             <h2 class="element__group">Кировск</h2>
@@ -60,6 +84,7 @@
           </div>
         </div>
         <div class="element">
+          <button class="trash"></button>
           <img class="element__image" src="./images/Соловецкий-остров.jpg" alt="Соловецкий остров">
           <div class="element__position">
             <h2 class="element__group">Соловецкий остров</h2>
@@ -67,6 +92,7 @@
           </div>
         </div>
         <div class="element">
+          <button class="trash"></button>
           <img class="element__image" src="./images/Москва.jpg" alt="Москва">
           <div class="element__position">
             <h2 class="element__group">Москва</h2>
@@ -74,6 +100,7 @@
           </div>
         </div>
         <div class="element">
+          <button class="trash"></button>
           <img class="element__image" src="./images/Остров-Ольхон.jpg" alt="Ольхон">
           <div class="element__position">
             <h2 class="element__group">Остров Ольхон</h2>

@@ -1,0 +1,12 @@
+.trash {
+  width: 18px;
+  height: 19px;
+  padding: 0;
+  background: url(../../../images/крышка.svg) 0 0 no-repeat, url(../../../images/ведро.svg) center bottom no-repeat;
+  background-color: transparent;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-repeat: no-repeat;
+  border: none;
+}
