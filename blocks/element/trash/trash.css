@@ -10,3 +10,8 @@
   background-repeat: no-repeat;
   border: none;
 }
+
+
+.trash:hover {
+  cursor: pointer;
+}
