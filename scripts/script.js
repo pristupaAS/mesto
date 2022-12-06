@@ -16,6 +16,9 @@ const cardInputSrc = document.querySelector('.popup__input_new-card_url');
 const cardForm = document.querySelector('.popup__form_new-card');
 const cardContent = document.querySelector('.elements');
 const cardTemplate = document.querySelector('#card').content
+const imageName = document.querySelector('.popup-image__name');
+const imageScreen = document.querySelector('.popup-image__big');
+const buttonCloseList = document.querySelectorAll('.popup__close');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened')
@@ -25,10 +28,13 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened')
 };
 
+buttonCloseList.forEach(button => {
+  const popup = button.closest('.popup');
+  button.addEventListener('click', () => closePopup(popup));
+});
+
 const generateCard = (object) => {
   const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
-  const imageName = document.querySelector('.popup-image__name');
-  const imageScreen = document.querySelector('.popup-image__big');
   const imageNameObject = cardElement.querySelector('.element__group');
   imageNameObject.textContent = object.name;
   const imageElement = cardElement.querySelector('.element__image');
@@ -52,7 +58,7 @@ const generateCard = (object) => {
   return cardElement;
 }
 
-const cardSubmit = (event) => {
+const handleCardButton = (event) => {
   event.preventDefault();
   renderCard({name: cardInputName.value, link: cardInputSrc.value});
     cardInputName.value = '';
@@ -68,7 +74,7 @@ initialCards.forEach((object) => {
   renderCard(object);
 });
 
-function formSubmitHandler (evt) {
+function handleProfileButton (evt) {
   evt.preventDefault();
   profileName.textContent = profileInputName.value;
   profileJob.textContent = profileJobInput.value ;
@@ -80,9 +86,7 @@ profileOpenButton.addEventListener('click', () => {
   profileInputName.value = profileName.textContent;
   profileJobInput.value = profileJob.textContent;
 });
-profileCloseButton.addEventListener('click', () => {closePopup(profilePopup)});
+
 cardAddPopup.addEventListener('click', () => {openPopup(cardPopup)});
-cardExitPopup.addEventListener('click', () => {closePopup(cardPopup)});
-imageClose.addEventListener('click', () => {closePopup(imagePopup)});
-profileForm.addEventListener('submit', formSubmitHandler);
-cardForm.addEventListener("submit", cardSubmit);
+profileForm.addEventListener('submit', handleProfileButton);
+cardForm.addEventListener("submit", handleCardButton);
