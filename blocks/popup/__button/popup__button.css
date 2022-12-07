@@ -1,4 +1,4 @@
-.popup__save {
+.popup__button {
   padding: 0;
   margin: 0;
   background-color: black;
@@ -13,20 +13,19 @@
   text-align: center;
   color: #FFFFFF;
   justify-self: center;
+
 }
 
-.popup__save:hover {
+.popup__button:hover {
   opacity: .8;
   cursor: pointer;
 }
 
 @media screen and (max-width: 550px) {
-  .popup__save {
+  .popup__button {
     width: 238px;
     height: 46px;
     font-size: 14px;
     line-height: 17px;
   }
 }
-
-

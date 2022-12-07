@@ -5,3 +5,7 @@
     margin: 0;
     z-index: 1;
 }
+
+.popup-image__container:hover {
+  cursor: default;
+}

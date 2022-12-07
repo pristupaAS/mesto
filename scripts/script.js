@@ -19,19 +19,35 @@ const cardTemplate = document.querySelector('#card').content
 const imageName = document.querySelector('.popup-image__name');
 const imageScreen = document.querySelector('.popup-image__big');
 const buttonCloseList = document.querySelectorAll('.popup__close');
+const overlayCloselist = document.querySelectorAll('.popup');
 
 function openPopup(popup) {
-  popup.classList.add('popup_opened')
+  popup.classList.add('popup_opened');
+  document.addEventListener('keydown', closeButtonEscape)
 };
 
 function closePopup(popup) {
-  popup.classList.remove('popup_opened')
+  popup.classList.remove('popup_opened');
+  document.removeEventListener('keydown', closeButtonEscape)
+
 };
 
 buttonCloseList.forEach(button => {
   const popup = button.closest('.popup');
   button.addEventListener('click', () => closePopup(popup));
 });
+
+overlayCloselist.forEach(overlay => {
+  overlay.addEventListener('click', (evt) => {
+    closePopup(evt.target);
+});
+});
+
+function closeButtonEscape(event){
+  if (event.key === "Escape") {
+    closePopup(document.querySelector('.popup_opened'))
+}
+};
 
 const generateCard = (object) => {
   const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
@@ -56,7 +72,7 @@ const generateCard = (object) => {
     event.target.closest('.element').remove();
   });
   return cardElement;
-}
+};
 
 const handleCardButton = (event) => {
   event.preventDefault();
@@ -79,7 +95,7 @@ function handleProfileButton (evt) {
   profileName.textContent = profileInputName.value;
   profileJob.textContent = profileJobInput.value ;
   closePopup(profilePopup);
-}
+};
 
 profileOpenButton.addEventListener('click', () => {
   openPopup(profilePopup);

@@ -10,6 +10,10 @@
 
 }
 
+.popup__container:hover {
+  cursor: default;
+}
+
 @media screen and (max-width: 550px) {
   .popup__container {
     min-width: 238px;
