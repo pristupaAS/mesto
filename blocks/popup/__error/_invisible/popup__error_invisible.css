@@ -1,3 +1,20 @@
 .popup__error_invisible {
   display: none;
+  min-height: 25px;
+  color: red;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.popup__error_invisible:last-of-type {
+  margin-bottom: 13px;
+  min-height: 30px;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__error_invisible:last-of-type {
+    margin-bottom: 10px;
+  }
 }

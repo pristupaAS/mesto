@@ -20,6 +20,7 @@ const imageName = document.querySelector('.popup-image__name');
 const imageScreen = document.querySelector('.popup-image__big');
 const buttonCloseList = document.querySelectorAll('.popup__close');
 const overlayCloselist = document.querySelectorAll('.popup');
+const cardButtonNewCard = document.querySelector('.popup__button_new-card');
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -29,7 +30,6 @@ function openPopup(popup) {
 function closePopup(popup) {
   popup.classList.remove('popup_opened');
   document.removeEventListener('keydown', closeButtonEscape)
-
 };
 
 buttonCloseList.forEach(button => {
@@ -39,7 +39,7 @@ buttonCloseList.forEach(button => {
 
 overlayCloselist.forEach(overlay => {
   overlay.addEventListener('click', (evt) => {
-    closePopup(evt.target);
+    if (evt.target.classList.contains('popup_opened')){closePopup(evt.target);}
 });
 });
 
@@ -79,6 +79,8 @@ const handleCardButton = (event) => {
   renderCard({name: cardInputName.value, link: cardInputSrc.value});
     cardInputName.value = '';
     cardInputSrc.value = '';
+    cardButtonNewCard.classList.add('popup__button_disabled');
+    cardButtonNewCard.setAttribute('disabled','disabled');
     closePopup(cardPopup);
 };
 
