@@ -1,19 +1,20 @@
 import { openPopup, imagePopup, imageScreen, imageName } from "./index.js";
 
 class Card {
-  constructor({ name, link }) {
+  constructor({ name, link }, cardTemplate) {
     this._name = name;
     this._link = link;
+    this._cardTemplate = cardTemplate
+
   }
 
   _getTemplateCard() {
-    const card = document.querySelector("#card").content.querySelector(".element").cloneNode(true);
+    const card = this._cardTemplate.querySelector(".element").cloneNode(true);
     return card;
   }
 
   _handleLikeCard() {
-    const laik = this._newCard.querySelector(".element__group-like");
-    laik.classList.toggle("element__group-like_active");
+    this._likeButton.classList.toggle("element__group-like_active");
   }
 
   _handleDeleteCard() {
@@ -25,25 +26,25 @@ class Card {
     openPopup(imagePopup);
     imageScreen.src = this._link;
     imageScreen.alt = this._name;
-    imageName.textContent = imageScreen.alt;
+    imageName.textContent = this._name;
   }
 
   _setEventListeners() {
-    const deleteCard = this._newCard.querySelector(".trash");
-    deleteCard.addEventListener("click", () => this._handleDeleteCard());
+    this._deleteCard = this._newCard.querySelector(".trash");
+    this._deleteCard.addEventListener("click", () => this._handleDeleteCard());
 
-    const openImage = this._newCard.querySelector(".element__image");
-    openImage.addEventListener("click", () => this._handleOpenImage());
+    this._cardImage = this._newCard.querySelector(".element__image");
+    this._cardImage.addEventListener("click", () => this._handleOpenImage());
 
-    const likeButton = this._newCard.querySelector(".element__group-like");
-    likeButton.addEventListener("click", () => this._handleLikeCard());
+    this._likeButton = this._newCard.querySelector(".element__group-like");
+    this._likeButton.addEventListener("click", () => this._handleLikeCard());
   }
 
   _setData() {
     const title = this._newCard.querySelector(".element__group");
     title.textContent = this._name;
-    const nameLink = this._newCard.querySelector(".element__image");
-    nameLink.src = this._link;
+    this._cardImage.src = this._link;
+    this._cardImage.alt = this._name;
   }
 
   getView() {
